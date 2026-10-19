@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LEO Clube Cuiabá Boa Esperança | Links</title>
+<meta name="description" content="LEO Clube Cuiabá Boa Esperança · Distrito LB-4 · Liderar para servir. WhatsApp, site e e-mail do clube.">
+<meta name="theme-color" content="#0C3B22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#000;
+    --green:#0C3B22;
+    --green-2:#14603a;
+    --green-glow:#1f9a5a;
+    --gold:#E8B730;
+    --gold-soft:#F5D36B;
+    --text:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    background:var(--bg);
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* ================= HERO ================= */
+.hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px 40px;
+    overflow:hidden;
+}
+
+/* brilho verde no canto superior esquerdo */
+.hero::before{
+    content:'';
+    position:absolute;
+    top:-120px; left:-160px;
+    width:420px; height:520px;
+    background:radial-gradient(circle, rgba(31,154,90,.45) 0%, rgba(12,59,34,.25) 40%, transparent 70%);
+    filter:blur(20px);
+    pointer-events:none;
+}
+
+/* grade de pontos dourados no canto superior direito */
+.hero::after{
+    content:'';
+    position:absolute;
+    top:14px; right:14px;
+    width:240px; height:300px;
+    background-image:radial-gradient(circle, rgba(232,183,48,.8) 2px, transparent 2.5px);
+    background-size:26px 30px;
+    -webkit-mask-image:linear-gradient(to bottom left, #000 30%, transparent 85%);
+            mask-image:linear-gradient(to bottom left, #000 30%, transparent 85%);
+    pointer-events:none;
+}
+
+.logo-wrap{
+    position:relative;
+    width:300px;
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:30px;
+    z-index:2;
+}
+
+/* anel externo fino */
+.logo-wrap::before{
+    content:'';
+    position:absolute;
+    inset:-50px;
+    border-radius:50%;
+    border:1px solid rgba(232,183,48,.22);
+}
+
+/* anel com glow */
+.logo-ring{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:#000;
+    box-shadow:
+        0 0 0 2px rgba(232,183,48,.55),
+        0 0 40px 6px rgba(31,154,90,.55),
+        inset 0 0 40px rgba(31,154,90,.35);
+    animation:pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%,100%{box-shadow:0 0 0 2px rgba(232,183,48,.55),0 0 40px 6px rgba(31,154,90,.55),inset 0 0 40px rgba(31,154,90,.35);}
+    50%{box-shadow:0 0 0 2px rgba(232,183,48,.8),0 0 60px 12px rgba(31,154,90,.7),inset 0 0 50px rgba(31,154,90,.45);}
+}
+
+.logo-wrap img{
+    position:relative;
+    width:78%;
+    height:78%;
+    object-fit:contain;
+    border-radius:50%;
+    background:#fff;
+    padding:10px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+}
+
+.hero .club-name{
+    font-size:46px;
+    font-weight:700;
+    line-height:1;
+    letter-spacing:.5px;
+}
+
+.hero .club-name span{color:var(--gold);}
+
+.hero .club-sub{
+    font-size:17px;
+    font-weight:400;
+    opacity:.9;
+    margin-top:8px;
+}
+
+.hero h2{
+    font-size:16px;
+    font-weight:400;
+    opacity:.95;
+    margin-top:34px;
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+.hero h1{
+    font-size:22px;
+    line-height:1.3;
+    font-weight:700;
+}
+
+.hero p.cta{
+    font-size:18px;
+    font-weight:500;
+    color:var(--gold);
+    margin-top:50px;
+}
+
+.arrow{
+    margin-top:24px;
+    font-size:38px;
+    color:var(--gold-soft);
+    animation:float 1.5s infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(8px);}
+}
+
+/* ================= LINKS ================= */
+.links{
+    width:100%;
+    max-width:700px;
+    margin:30px auto 30px;
+    padding:0 20px;
+}
+
+.link-btn{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-bottom:45px;
+    text-decoration:none;
+    color:inherit;
+}
+
+.link-btn::after{
+    content:'';
+    position:absolute;
+    bottom:-18px;
+    width:65%;
+    height:20px;
+    background:radial-gradient(circle, rgba(31,154,90,.6) 0%, rgba(12,59,34,.2) 40%, transparent 75%);
+    filter:blur(8px);
+}
+
+.card{
+    position:relative;
+    width:100%;
+    max-width:560px;
+    aspect-ratio:720 / 320;
+    border-radius:28px;
+    border:3px solid var(--green-2);
+    background:#000;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    transition:.3s ease;
+}
+
+.link-btn:hover .card{
+    transform:translateY(-5px) scale(1.01);
+    border-color:var(--gold);
+}
+
+/* grade em perspectiva do lado da arte */
+.card .art{
+    position:absolute;
+    top:0; bottom:0;
+    width:52%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card .art::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 55%, rgba(31,154,90,.45) 0%, transparent 60%),
+        repeating-linear-gradient(90deg, rgba(31,154,90,.18) 0 1px, transparent 1px 34px),
+        repeating-linear-gradient(0deg, rgba(31,154,90,.18) 0 1px, transparent 1px 34px);
+    -webkit-mask-image:radial-gradient(circle at 50% 55%, #000 25%, transparent 72%);
+            mask-image:radial-gradient(circle at 50% 55%, #000 25%, transparent 72%);
+}
+
+.card .art svg{
+    position:relative;
+    width:44%;
+    height:auto;
+    filter:drop-shadow(0 0 18px rgba(31,154,90,.9)) drop-shadow(0 0 4px rgba(232,183,48,.5));
+    transition:.4s ease;
+}
+
+.link-btn:hover .art svg{transform:scale(1.08) rotate(-4deg);}
+
+.card .text{
+    position:relative;
+    width:48%;
+    padding:0 6%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    z-index:2;
+}
+
+.card.art-right .art{right:0;}
+.card.art-right .text{margin-right:auto;}
+.card.art-left .art{left:0;}
+.card.art-left .text{margin-left:auto;}
+
+.tag{
+    display:inline-block;
+    background:var(--green);
+    color:#fff;
+    font-size:clamp(11px, 3.1vw, 18px);
+    font-weight:500;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:2px 10px;
+    white-space:nowrap;
+    border-bottom:2px solid var(--gold);
+}
+
+.title{
+    font-size:clamp(28px, 8.5vw, 48px);
+    font-weight:500;
+    line-height:1.15;
+    margin-top:4px;
+}
+
+.detail{
+    font-size:clamp(9px, 2.4vw, 13px);
+    color:var(--gold-soft);
+    margin-top:4px;
+    word-break:break-all;
+    opacity:.9;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    text-align:center;
+    padding:40px 20px 30px;
+    color:#fff;
+    font-size:16px;
+    opacity:.85;
+}
+
+footer small{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    opacity:.7;
+}
+
+footer a{color:var(--gold);text-decoration:none;}
+
+/* ================= RESPONSIVO ================= */
+@media(max-width:768px){
+    .logo-wrap{width:230px;height:230px;margin-bottom:24px;}
+    .logo-wrap::before{inset:-36px;}
+    .hero .club-name{font-size:38px;}
+    .hero h1{font-size:19px;}
+    .hero::after{width:160px;height:220px;}
+    footer{font-size:14px;}
+}
+
+@media (prefers-reduced-motion: reduce){
+    .logo-ring,.arrow{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+    <div class="logo-wrap">
+        <div class="logo-ring"></div>
+        <!-- Logo: usa a cópia local se existir; senão, puxa do site do clube -->
+        <img src="logo leo clube.jpg"
+             alt="Logo LEO Clube Cuiabá Boa Esperança"
+             onerror="this.onerror=null;this.src='https://www.xn--leoclubeboaesperana-nyb.com/logo%20leo%20clube.jpg';">
+    </div>
+
+    <div class="hero-content">
+        <div class="club-name">LEO <span>Clube</span></div>
+        <div class="club-sub">Cuiabá Boa Esperança · Distrito LB-4</div>
+
+        <h2>Jovens que aprendem a liderar servindo</h2>
+        <h1>Voluntariado • Liderança • Cidadania • Amizade</h1>
+
+        <p class="cta">Clique no botão para ser redirecionado</p>
+        <div class="arrow">↓</div>
+    </div>
+
+</section>
+
+<!-- ================= LINKS ================= -->
+<section class="links">
+
+    <!-- WhatsApp -->
+    <a class="link-btn" href="https://wa.me/556592638816?text=Ol%C3%A1!%20Vim%20pelo%20link%20do%20LEO%20Clube%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+       target="_blank" rel="noopener">
+        <div class="card art-right">
+            <div class="text">
+                <span class="tag">Fale com a gente</span>
+                <span class="title">WhatsApp</span>
+                <span class="detail">(65) 9263-8816</span>
+            </div>
+            <div class="art">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <path d="M32 6C17.6 6 6 16.9 6 30.4c0 7.6 3.7 14.4 9.6 18.9L13 58l9.9-5.4c2.8.9 5.9 1.4 9.1 1.4 14.4 0 26-10.9 26-24.4S46.4 6 32 6Z"
+                          fill="#1f9a5a" stroke="#F5D36B" stroke-width="2.5"/>
+                    <path d="M24.5 20.5c.8-.8 2-.8 2.6.1l2.4 3.6c.5.8.4 1.8-.3 2.4l-1.6 1.4c1.4 3 3.8 5.5 6.9 6.9l1.4-1.6c.6-.7 1.6-.8 2.4-.3l3.6 2.4c.9.6 1 1.8.1 2.6l-1.6 1.6c-1.4 1.4-3.6 1.8-5.4.9-5.4-2.6-9.7-6.9-12.3-12.3-.9-1.8-.5-4 .9-5.4l.9-.3Z"
+                          fill="#fff"/>
+                </svg>
+            </div>
+        </div>
+    </a>
+
+    <!-- Site -->
+    <a class="link-btn" href="https://www.xn--leoclubeboaesperana-nyb.com/" target="_blank" rel="noopener">
+        <div class="card art-left">
+            <div class="art">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <circle cx="32" cy="32" r="25" fill="#1f9a5a" stroke="#F5D36B" stroke-width="2.5"/>
+                    <ellipse cx="32" cy="32" rx="11" ry="25" stroke="#fff" stroke-width="2.5"/>
+                    <path d="M7 32h50M11 19h42M11 45h42" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="text">
+                <span class="tag">Conheça nosso</span>
+                <span class="title">Site</span>
+                <span class="detail">leoclubeboaesperança.com</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- E-mail -->
+    <a class="link-btn" href="mailto:leoclubecuiababoaesperanca@gmail.com?subject=Contato%20pelo%20link%20do%20LEO%20Clube">
+        <div class="card art-right">
+            <div class="text">
+                <span class="tag">Envie um</span>
+                <span class="title">E-mail</span>
+                <span class="detail">leoclubecuiababoaesperanca@gmail.com</span>
+            </div>
+            <div class="art">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <rect x="6" y="14" width="52" height="36" rx="6" fill="#1f9a5a" stroke="#F5D36B" stroke-width="2.5"/>
+                    <path d="M9 18l23 17 23-17" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </a>
+
+</section>
+
+<footer>
+    © 2026 LEO Clube Cuiabá Boa Esperança. Todos os direitos reservados.
+    <small>Desenvolvido por <a href="https://www.ominydesenvolvimentos.com/" target="_blank" rel="noopener">Ominy Desenvolvimentos</a></small>
+</footer>
+
+</body>
+</html>
